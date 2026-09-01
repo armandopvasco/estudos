@@ -3,8 +3,7 @@ package br.com.alura.tabelafipe.model;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import java.util.List;
-
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record DadosAnos(@JsonAlias("anos") List<Dados> anos) {
+public record Dados(@JsonAlias("codigo") String codigo,
+                    @JsonAlias("nome") String nome) {
 }
