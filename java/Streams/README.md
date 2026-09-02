@@ -24,51 +24,64 @@ Um uso de stream divide-se em três partes:
 
 Exemplo prático simples para filtrar nomes que começam com a letra "A":
 
+```java
 javaList<String> nomes = Arrays.asList("Ana", "Bruno", "Amanda", "Carlos");
 
 List<String> resultado = nomes.stream()
     .filter(n -> n.startsWith("A"))
     .collect(Collectors.toList());
+```
 
 ## EXERCÍCIOS:
 
 ### CAPÍTULO 1:
 - 1 - Dada a lista de números inteiros abaixo, filtre apenas os números pares e imprima-os.
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
         // código para filtragem.
     }
 }
+```
 
 - 2 - Dada a lista de strings abaixo, converta todas para letras maiúsculas e imprima-as.
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<String> palavras = Arrays.asList("java", "stream", "lambda");
         // código para conversão
     }
+}
+```
 
 - 3 - Dada a lista de números inteiros abaixo, filtre os números ímpares, multiplique cada um por 2 e colete os resultados em uma nova lista.
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
         // código para filtragem e coleta
     }
+}
+```
 
 - 4 - Dada a lista de strings abaixo, remova as duplicatas (palavras que aparecem mais de uma vez) e imprima o resultado.
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<String> palavras = Arrays.asList("apple", "banana", "apple", "orange", "banana");
         // código da filtragem 
     }
 }
+```
 
 - 5 - Dada a lista de sublistas de números inteiros abaixo, extraia todos os números primos em uma única lista e os ordene em ordem crescente.
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<List<Integer>> listaDeNumeros = Arrays.asList(
@@ -80,10 +93,11 @@ public class Main {
     //código para filtrar e ordenar números primos
     }
 }
+```
 
 - 6 - Dado um objeto Pessoa com os campos nome e idade, filtre as pessoas com mais de 18 anos, extraia os nomes e imprima-os em ordem alfabética. A classe Pessoa está definida abaixo.
 
-Pessoa.java:
+```java
 public class Pessoa {
     String nome;
     int idade;
@@ -101,8 +115,9 @@ public class Pessoa {
         return idade;
     }
 }
+```
 
-Main.java:
+```java
 public class Main {
     public static void main(String[] args) {
         List<Pessoa> pessoas = Arrays.asList(
@@ -114,10 +129,11 @@ public class Main {
     // código para filtrar pessoas
     }
 }
+```
 
 - 7 - Você tem uma lista de objetos do tipo Produto, onde cada produto possui os atributos nome (String), preco (double) e categoria (String). Filtre todos os produtos da categoria "Eletrônicos" com preço menor que R$ 1000, ordene-os pelo preço em ordem crescente e colete o resultado em uma nova lista.
 
-Produto.java:
+```java
 public class Produto {
     private String nome;
     private double preco;
@@ -150,8 +166,9 @@ public class Produto {
                '}';
     }
 }
+```
 
-Main.java:
+```java
 public class Main {
     public static void main(String[] args) {
         List<Produto> produtos = Arrays.asList(
@@ -166,6 +183,7 @@ public class Main {
         // código para filtrar os produtos
     }
 }
+```
 
 - 8 - Tomando o mesmo código do exercício anterior como base, modifique o código para que a saída mostre apenas os três produtos mais baratos da categoria "Eletrônicos".
 
@@ -183,6 +201,7 @@ public class Main {
 ### CAPÍTULO 3:
 - 1 - Dada a lista de números inteiros a seguir, encontre o maior número dela.
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<Integer> numeros = Arrays.asList(10, 20, 30, 40, 50);
@@ -190,9 +209,11 @@ public class Main {
         // código do agrupamento
     }
 }
+```
 
 - 2 -Dada a lista de palavras (strings) abaixo, agrupe-as pelo seu tamanho. No código a seguir, há um exemplo prático do resultado esperado.
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<String> palavras = Arrays.asList("java", "stream", "lambda", "code");
@@ -202,9 +223,11 @@ public class Main {
         // Resultado Esperado: {4=[java, code], 6=[stream, lambda]}
     }
 }
+```
 
 - 3 - Dada a lista de nomes abaixo, concatene-os separados por vírgula. No código a seguir, há um exemplo prático do resultado esperado.
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<String> nomes = Arrays.asList("Alice", "Bob", "Charlie");
@@ -213,30 +236,35 @@ public class Main {
         // Resultado Esperado: "Alice, Bob, Charlie"
     }
 }
+```
 
 - 4 - Dada a lista de números inteiros abaixo, calcule a soma dos quadrados dos números pares.
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
         // código da filtragem e agrupamento dos dados
     }
 }
+```
 
 - 5 - Dada uma lista de números inteiros, separe os números pares dos ímpares.
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
         // código do particionamento da lista
     }
 }
+```
 
 - Nos próximos exercícios, iremos usar o mesmo código base, dado a seguir:
 
 Você tem uma lista de objetos do tipo Produto, onde cada produto possui os atributos nome (String), preco (double) e categoria (String). Filtre todos os produtos da categoria "Eletrônicos" com preço menor que R$ 1000, ordene-os pelo preço em ordem crescente e colete o resultado em uma nova lista.
 
-Produto.java:
+```java
 public class Produto {
     private String nome;
     private double preco;
@@ -269,8 +297,9 @@ public class Produto {
                '}';
     }
 }
+```
 
-Main.java:
+```java
 public class Main {
     public static void main(String[] args) {
         List<Produto> produtos = Arrays.asList(
@@ -285,6 +314,7 @@ public class Main {
         // código usando streams
     }
 }
+```
 
 - 6 - Dada a lista de produtos acima, agrupe-os por categoria em um Map<String, List<Produto>>.
 

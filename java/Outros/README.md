@@ -10,7 +10,9 @@ Esse é um projeto onde foram realizadas algumas questões relacionadas a assunt
 ## EXERCÍCIOS:
 - 1 - Imagine que você tem uma lista de strings. Algumas das strings são números, mas outras não. Queremos converter a lista de strings para uma lista de números. Se a conversão falhar, você deve ignorar o valor. Por exemplo, na lista a seguir, a saída deve ser [10, 20]:
 
+```java
 List<String> input = Arrays.asList("10", "abc", "20", "30x");
+```
 
 - 2 - Implemente um método que recebe um número inteiro dentro de um Optional. Se o número estiver presente e for positivo, calcule seu quadrado. Caso contrário, retorne Optional.empty.
 
@@ -29,7 +31,7 @@ public class Main {
 
 - 3 - Implemente um método que recebe uma String representando um nome completo separado por espaços. O método deve retornar o primeiro e o último nome após remover os espaços desnecessários.
 
-Copiar:
+```java
 public class Main {
 	public static void main(String[] args) {
 		System.out.println(obterPrimeiroEUltimoNome("  João Carlos Silva   ")); // Saída: "João Silva"
@@ -40,10 +42,11 @@ public class Main {
 		// Implementar aqui
 	}
 }
+```
 
 - 4 - Implemente um método que verifica se uma frase é um palíndromo. Um palíndromo é uma palavra/frase que, quando lida de trás pra frente, é igual à leitura normal. Um exemplo:
 
-Copiar:
+```java
 public class Main {
     public static void main(String[] args) {
 		System.out.println(ehPalindromo("socorram me subi no onibus em marrocos")); // Saída: true
@@ -54,9 +57,11 @@ public class Main {
 		// Implementar aqui
 	}
 }
+```
 
 - 5 - Implemente um método que recebe uma lista de e-mails (String) e retorna uma nova lista onde cada e-mail está convertido para letras minúsculas.
 
+```java
 public class Main {
     public static void main(String[] args) {
         List<String> emails = Arrays.asList("TESTE@EXEMPLO.COM", "exemplo@Java.com ", "Usuario@teste.Com");
@@ -68,9 +73,11 @@ public class Main {
         // Implementar aqui
     }
 }
+```
 
 6 - Crie um enum Mes que represente os meses do ano. Adicione um método que retorna o número de dias de cada mês, considerando anos não bissextos.
 
+```java
 public enum Mes {
     // Definir os valores
     ;
@@ -79,14 +86,18 @@ public enum Mes {
         // Implementar aqui
     }
 }
+```
 
 Para chamar o método:
 
+```java
 System.out.println(Mes.FEVEREIRO.getNumeroDeDias()); // 28
 System.out.println(Mes.JULHO.getNumeroDeDias()); // 31
+```
 
 - 7 - Crie um enum Moeda com valores como DOLAR, EURO, REAL. Cada moeda deve ter uma taxa de conversão para reais. Adicione um método que recebe um valor em reais e retorna o valor convertido para a moeda.
 
+```java
 public enum Moeda {
     // Definir os valores
     ;
@@ -95,14 +106,18 @@ public enum Moeda {
         // Implementar aqui
     }
 }
+```
 
 Para chamar o método:
 
+```java
 System.out.println(Moeda.DOLAR.converterPara(100)); // 19.60 (aproximado)
 System.out.println(Moeda.EURO.converterPara(100)); // 18.18 (aproximado)
+```
 
 - 8 - Crie um enum CodigoErro com valores de erros HTTP, como NOT_FOUND, BAD_REQUEST, INTERNAL_SERVER_ERROR. Cada valor deve ter um código numérico e uma descrição associados. Adicione métodos para acessar o código e a descrição. Dica: consulte o site https://http.cat/ para conhecer os vários erros HTTP e conseguir descrevê-los melhor.
 
+```java
 public enum CodigoErro {
     // Definir os valores
     ;
@@ -115,8 +130,11 @@ public enum CodigoErro {
         // Implementar aqui
     }
 }
+```
 
 Para chamar o método:
 
+```java
 System.out.println(CodigoErro.NOT_FOUND.getCodigo()); // 404
 System.out.println(CodigoErro.BAD_REQUEST.getDescricao()); // Requisição inválida
+```
