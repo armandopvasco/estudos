@@ -14,7 +14,7 @@ List<String> input = Arrays.asList("10", "abc", "20", "30x");
 
 - 2 - Implemente um método que recebe um número inteiro dentro de um Optional. Se o número estiver presente e for positivo, calcule seu quadrado. Caso contrário, retorne Optional.empty.
 
-Copiar:
+```java
 public class Main {
     public static void main(String[] args) {
        System.out.println(processaNumero(Optional.of(5))); // Saída: Optional[25]
@@ -25,6 +25,7 @@ public class Main {
 		// Implementar aqui
 	}
 }
+```
 
 - 3 - Implemente um método que recebe uma String representando um nome completo separado por espaços. O método deve retornar o primeiro e o último nome após remover os espaços desnecessários.
 
