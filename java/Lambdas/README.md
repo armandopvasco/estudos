@@ -11,19 +11,15 @@ Funções lambda em Java (também conhecidas como Expressões Lambda) são bloco
 A estrutura básica de uma expressão lambda usa o operador de seta ->:
 (argumentos) -> { corpo da função }
 
-Argumentos: Os dados que a função recebe (podem ser vazios (), um único valor ou vários separados por vírgula).
-
-Seta (->): Separa os argumentos do que o código vai fazer.
-
-Corpo: A tarefa ou o cálculo que será executado.
+ - Argumentos: Os dados que a função recebe (podem ser vazios (), um único valor ou vários separados por vírgula).
+ - Seta (->): Separa os argumentos do que o código vai fazer.
+ - Corpo: A tarefa ou o cálculo que será executado.
 
 - Principais características:
 
--- Funções anônimas: Não precisam de um nome fixo nem de modificadores de acesso.
-
--- Interfaces funcionais: Só funcionam em conjunto com uma interface que possui apenas um método abstrato (como Runnable ou Consumer).
-
--- Economia de código: Substituem as antigas classes anônimas, que exigiam muitas linhas repetitivas para tarefas simples.
+	- Funções anônimas: Não precisam de um nome fixo nem de modificadores de acesso.
+	- Interfaces funcionais: Só funcionam em conjunto com uma interface que possui apenas um método abstrato (como Runnable ou Consumer).
+	- Economia de código: Substituem as antigas classes anônimas, que exigiam muitas linhas repetitivas para tarefas simples.
 
 ### EXERCÍCIOS:
 
