@@ -1,2 +1,2 @@
-# estudos_java
-Repositórios para guardar conteúdos dos meus estudos relacionados a linguagem de programação JAVA.
+# Estudos - Linguagem JAVA
+Repositórios para guardar conteúdos dos meus estudos relacionados ao JAVA de forma GERAL.

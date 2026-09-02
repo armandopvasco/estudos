@@ -1,36 +1,295 @@
-# estudos_java_streams
-Repositórios para guardar conteúdos dos meus estudos relacionados a linguagem de programação JAVA (STREAMS).
+# STREAMS (Java Streams API)
+Repositórios para guardar conteúdos dos meus estudos relacionados ao tema.
 
-Esse é um projeto onde foram realizadas algumas questões relacionadas a STREAMS.
+Esse é um projeto onde foram solucionadas algumas questões relacionadas a aula de STREAMS.
 
-STREAMS:
-
+## CONCEITO (Algumas informações obtidas em pesquisa numa IA):
 As streams em Java (introduzidas no Java 8 via Java 8 Streams API) são uma abstração para processar sequências de elementos de forma declarativa e funcional.
 
 Elas não são estruturas de dados que armazenam valores, mas sim um fluxo de dados que permite aplicar operações de alta performance (como filtrar, mapear e reduzir) em coleções de forma limpa e concisa.
 
-Principais Características:
-Não armazenam dados: Operam sobre uma fonte de dados (como listas ou arrays) e realizam cálculos no próprio fluxo.
+### Principais Características:
+- Não armazenam dados: Operam sobre uma fonte de dados (como listas ou arrays) e realizam cálculos no próprio fluxo.
+- Abordagem declarativa: Você diz o que quer fazer (ex: filtrar itens maiores que 10), e não como fazer (evitando loops for tradicionais).
+- Avaliação preguiçosa (Lazy Evaluation): As operações intermediárias não são executadas na hora; elas só rodam quando uma operação final é acionada.
+- Processamento Paralelo: Permite rodar operações usando múltiplos núcleos do processador com pouquíssimo código.
 
-Abordagem declarativa: Você diz o que quer fazer (ex: filtrar itens maiores que 10), e não como fazer (evitando loops for tradicionais).
-
-Avaliação preguiçosa (Lazy Evaluation): As operações intermediárias não são executadas na hora; elas só rodam quando uma operação final é acionada.
-
-Processamento Paralelo: Permite rodar operações usando múltiplos núcleos do processador com pouquíssimo código.
-
-Como Funciona o Pipeline:
+### Como Funciona o Pipeline:
 
 Um uso de stream divide-se em três partes:
 
-Fonte: De onde vêm os dados (ex: lista.stream()).
-
-Operações Intermediárias: Transformam o fluxo e retornam outra stream (ex: .filter(), .map()).
-
-Operação fINAL/Terminal: Encerra o fluxo e gera um resultado ou efeito colateral (ex: .collect(), .forEach(), .count()).
+- Fonte: De onde vêm os dados (ex: lista.stream()).
+- Operações Intermediárias: Transformam o fluxo e retornam outra stream (ex: .filter(), .map()).
+- Operação fINAL/Terminal: Encerra o fluxo e gera um resultado ou efeito colateral (ex: .collect(), .forEach(), .count()).
 
 Exemplo prático simples para filtrar nomes que começam com a letra "A":
 
 javaList<String> nomes = Arrays.asList("Ana", "Bruno", "Amanda", "Carlos");
+
 List<String> resultado = nomes.stream()
     .filter(n -> n.startsWith("A"))
     .collect(Collectors.toList());
+
+## EXERCÍCIOS:
+
+### CAPÍTULO 1:
+- 1 - Dada a lista de números inteiros abaixo, filtre apenas os números pares e imprima-os.
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
+        // código para filtragem.
+    }
+}
+
+- 2 - Dada a lista de strings abaixo, converta todas para letras maiúsculas e imprima-as.
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> palavras = Arrays.asList("java", "stream", "lambda");
+        // código para conversão
+    }
+
+- 3 - Dada a lista de números inteiros abaixo, filtre os números ímpares, multiplique cada um por 2 e colete os resultados em uma nova lista.
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
+        // código para filtragem e coleta
+    }
+
+- 4 - Dada a lista de strings abaixo, remova as duplicatas (palavras que aparecem mais de uma vez) e imprima o resultado.
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> palavras = Arrays.asList("apple", "banana", "apple", "orange", "banana");
+        // código da filtragem 
+    }
+}
+
+- 5 - Dada a lista de sublistas de números inteiros abaixo, extraia todos os números primos em uma única lista e os ordene em ordem crescente.
+
+public class Main {
+    public static void main(String[] args) {
+        List<List<Integer>> listaDeNumeros = Arrays.asList(
+            Arrays.asList(1, 2, 3, 4),
+            Arrays.asList(5, 6, 7, 8),
+            Arrays.asList(9, 10, 11, 12)
+        );
+
+    //código para filtrar e ordenar números primos
+    }
+}
+
+- 6 - Dado um objeto Pessoa com os campos nome e idade, filtre as pessoas com mais de 18 anos, extraia os nomes e imprima-os em ordem alfabética. A classe Pessoa está definida abaixo.
+
+Pessoa.java:
+public class Pessoa {
+    String nome;
+    int idade;
+
+    Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+}
+
+Main.java:
+public class Main {
+    public static void main(String[] args) {
+        List<Pessoa> pessoas = Arrays.asList(
+            new Pessoa("Alice", 22),
+            new Pessoa("Bob", 17),
+            new Pessoa("Charlie", 19)
+        );
+
+    // código para filtrar pessoas
+    }
+}
+
+- 7 - Você tem uma lista de objetos do tipo Produto, onde cada produto possui os atributos nome (String), preco (double) e categoria (String). Filtre todos os produtos da categoria "Eletrônicos" com preço menor que R$ 1000, ordene-os pelo preço em ordem crescente e colete o resultado em uma nova lista.
+
+Produto.java:
+public class Produto {
+    private String nome;
+    private double preco;
+    private String categoria;
+
+    public Produto(String nome, double preco, String categoria) {
+        this.nome = nome;
+        this.preco = preco;
+        this.categoria = categoria;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+               "nome='" + nome + '\'' +
+               ", preco=" + preco +
+               ", categoria='" + categoria + '\'' +
+               '}';
+    }
+}
+
+Main.java:
+public class Main {
+    public static void main(String[] args) {
+        List<Produto> produtos = Arrays.asList(
+            new Produto("Smartphone", 800.0, "Eletrônicos"),
+            new Produto("Notebook", 1500.0, "Eletrônicos"),
+            new Produto("Teclado", 200.0, "Eletrônicos"),
+            new Produto("Cadeira", 300.0, "Móveis"),
+            new Produto("Monitor", 900.0, "Eletrônicos"),
+            new Produto("Mesa", 700.0, "Móveis")
+        );
+
+        // código para filtrar os produtos
+    }
+}
+
+- 8 - Tomando o mesmo código do exercício anterior como base, modifique o código para que a saída mostre apenas os três produtos mais baratos da categoria "Eletrônicos".
+
+
+
+### CAPÍTULO 2 (Uso avançado de Java Streams):
+- 1 - Streams Infinitos (limitando a 10, só para teste)
+
+- 2 - FlapMap: O método flatMap é uma operação intermediária que é usada para transformar um Stream de coleções em um Stream de elementos. Aqui está um exemplo de como o flatMap é usado:
+
+- 3 - Redução de Streams: Stream.reduce() é uma operação terminal que é utilizada para reduzir o conteúdo de um Stream para um único valor.
+
+
+
+### CAPÍTULO 3:
+- 1 - Dada a lista de números inteiros a seguir, encontre o maior número dela.
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> numeros = Arrays.asList(10, 20, 30, 40, 50);
+
+        // código do agrupamento
+    }
+}
+
+- 2 -Dada a lista de palavras (strings) abaixo, agrupe-as pelo seu tamanho. No código a seguir, há um exemplo prático do resultado esperado.
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> palavras = Arrays.asList("java", "stream", "lambda", "code");
+
+        // código do agrupamento
+
+        // Resultado Esperado: {4=[java, code], 6=[stream, lambda]}
+    }
+}
+
+- 3 - Dada a lista de nomes abaixo, concatene-os separados por vírgula. No código a seguir, há um exemplo prático do resultado esperado.
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> nomes = Arrays.asList("Alice", "Bob", "Charlie");
+        // código do agrupamento de dados
+
+        // Resultado Esperado: "Alice, Bob, Charlie"
+    }
+}
+
+- 4 - Dada a lista de números inteiros abaixo, calcule a soma dos quadrados dos números pares.
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
+        // código da filtragem e agrupamento dos dados
+    }
+}
+
+- 5 - Dada uma lista de números inteiros, separe os números pares dos ímpares.
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
+        // código do particionamento da lista
+    }
+}
+
+- Nos próximos exercícios, iremos usar o mesmo código base, dado a seguir:
+
+Você tem uma lista de objetos do tipo Produto, onde cada produto possui os atributos nome (String), preco (double) e categoria (String). Filtre todos os produtos da categoria "Eletrônicos" com preço menor que R$ 1000, ordene-os pelo preço em ordem crescente e colete o resultado em uma nova lista.
+
+Produto.java:
+public class Produto {
+    private String nome;
+    private double preco;
+    private String categoria;
+
+    public Produto(String nome, double preco, String categoria) {
+        this.nome = nome;
+        this.preco = preco;
+        this.categoria = categoria;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+               "nome='" + nome + '\'' +
+               ", preco=" + preco +
+               ", categoria='" + categoria + '\'' +
+               '}';
+    }
+}
+
+Main.java:
+public class Main {
+    public static void main(String[] args) {
+        List<Produto> produtos = Arrays.asList(
+            new Produto("Smartphone", 800.0, "Eletrônicos"),
+            new Produto("Notebook", 1500.0, "Eletrônicos"),
+            new Produto("Teclado", 200.0, "Eletrônicos"),
+            new Produto("Cadeira", 300.0, "Móveis"),
+            new Produto("Monitor", 900.0, "Eletrônicos"),
+            new Produto("Mesa", 700.0, "Móveis")
+        );
+
+        // código usando streams
+    }
+}
+
+- 6 - Dada a lista de produtos acima, agrupe-os por categoria em um Map<String, List<Produto>>.
+
+- 7 - Dada a lista de produtos acima, conte quantos produtos há em cada categoria e armazene em um Map<String, Long>.
+
+- 8 - Dada a lista de produtos acima, encontre o produto mais caro de cada categoria e armazene o resultado em um Map<String, Optional<Produto>>.
+
+- 9 - Dada a lista de produtos acima, calcule o total dos preços dos produtos em cada categoria e armazene o resultado em um Map<String, Double>.
