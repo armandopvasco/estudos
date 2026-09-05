@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="445d08da-071a-4802-8791-5221e7b705d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/java/br/com/alura/screenmatch/repository/SerieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/java/br/com/alura/screenmatch/ScreenmatchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/java/br/com/alura/screenmatch/ScreenmatchApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/model/Fornecedor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/repository/FornecedorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/JPAHibernateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/JPAHibernateApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/model/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/model/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/model/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/model/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/model/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alura/jpahibernate/JPAHibernate/JPAHibernateApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alura/jpahibernate/JPAHibernate/JPAHibernateApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alura/jpahibernate/JPAHibernate/model/Categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alura/jpahibernate/JPAHibernate/model/Categoria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alura/jpahibernate/JPAHibernate/model/Pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alura/jpahibernate/JPAHibernate/model/Pedido.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alura/jpahibernate/JPAHibernate/model/Produto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alura/jpahibernate/JPAHibernate/model/Produto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/java/br/com/alura/screenmatch/model/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/java/br/com/alura/screenmatch/model/Serie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/java/br/com/alura/screenmatch/principal/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/java/br/com/alura/screenmatch/principal/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,29 +51,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.JPAHibernateApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/Meu Drive/Meus Documentos/Pessoal/Estudos - Cursos/estudos/java/JPAHibernate",
-    "node.js.detected.package.jshint": "true",
-    "node.js.selected.package.jshint": "",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.JPAHibernateApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Meu Drive/Meus Documentos/Pessoal/Estudos - Cursos/estudos/java/JPAHibernate&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.alura.jpahibernate.JPAHibernate.repository" />
       <recent name="br.com.alura.jpahibernate.JPAHibernate.jpahibernate" />
     </key>
   </component>

@@ -1,16 +1,21 @@
 package br.com.alura.jpahibernate.JPAHibernate.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Pedido {
     @Id
     private Long id;
     private LocalDate data;
+    @ManyToMany
+    @JoinTable(name = "pedido_produto",
+            joinColumns = @JoinColumn(name = "pedido_id"),
+            inverseJoinColumns = @JoinColumn(name = "produto_id"))
+    private List<Produto> produto = new ArrayList<>();
 
     public Pedido(Long id, LocalDate data) {
         this.id = id;
@@ -18,6 +23,14 @@ public class Pedido {
     }
 
     public Pedido() {
+    }
+
+    public List<Produto> getProdutos() {
+        return produto;
+    }
+
+    public void setProdutos(List<Produto> produtos) {
+        this.produto = produtos;
     }
 
     public Long getId() {

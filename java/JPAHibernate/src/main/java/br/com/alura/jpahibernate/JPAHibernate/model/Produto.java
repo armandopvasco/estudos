@@ -1,6 +1,5 @@
 package br.com.alura.jpahibernate.JPAHibernate.model;
 
-import br.com.alura.jpahibernate.JPAHibernate.repository.ProdutoRepository;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,14 +11,45 @@ public class Produto {
     private String nome;
     @Column(name = "valor")
     private Double preco;
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
+    @ManyToOne
+    @JoinColumn(name = "fornecedor_id")
+    private Fornecedor fornecedore;
 
-    public Produto(String nome, Double preco) {
+    public Produto(String nome, Double preco, Categoria categoria) {
         this.nome = nome;
         this.preco = preco;
     }
 
     public Produto(){
 
+    }
+
+//    public List<Pedido> getPedidos() {
+//        return pedidos;
+//    }
+//
+//    public void setPedidos(List<Pedido> pedidos) {
+//        this.pedidos = pedidos;
+//    }
+
+
+    public Fornecedor getFornecedore() {
+        return fornecedore;
+    }
+
+    public void setFornecedore(Fornecedor fornecedore) {
+        this.fornecedore = fornecedore;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 
     public Long getId() {
