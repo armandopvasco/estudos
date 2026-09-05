@@ -10,3 +10,5 @@ https://deividfortuna.github.io/fipe/
 - Modelar as abstrações da aplicação através de classes, records e métodos;
 - Revisar a utilização de lambdas, streams e iniciação ao Spring Framework;
 - Controle de dependências com Maven;
+
+OBS.: Como exemplo, foi utilizada a API para consulta de valores de tabela FIPE de carros.
