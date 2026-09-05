@@ -3,6 +3,68 @@ Repositórios para guardar conteúdos dos meus estudos relacionados a linguagem 
 
 Esse é um projeto onde foram realizadas algumas questões relacionadas a JPA e Hibernate.
 
+## CONCEITOS:
+
+O Spring Data JPA, o JPA e o Hibernate formam a pilha tecnológica padrão para gerenciar dados em bancos relacionais no ecossistema Java. O JPA define o padrão de regras, o Hibernate executa as operações fazendo a ponte com o banco, e o Spring Boot automatiza toda a configuração inicial.
+
+Você pode iniciar um projeto estruturado rapidamente utilizando a ferramenta oficial de geração de projetos no Spring Initializr (https://start.spring.io/).
+
+###Entendendo os Conceitos:
+
+- JPA (Jakarta/Java Persistence API): É apenas uma especificação (um conjunto de regras e interfaces) de como os dados em objetos Java devem ser salvos em tabelas relacionais. Ela não faz nada sozinha.
+- Hibernate: É a implementação concreta da JPA. Ele transforma as chamadas orientadas a objetos em comandos SQL reais enviados ao banco de dados.
+- Spring Data JPA: É uma camada acima do Hibernate que remove códigos repetitivos (boilerplates), permitindo criar operações de banco escrevendo interfaces simples.
+
+###Exemplo Prático e Conceitual:
+
+- 1. Configuração (application.properties):
+O Spring Boot gerencia as conexões automaticamente quando você define as propriedades do seu banco no arquivo de configuração:
+
+```java
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+```
+
+- 2. A Entidade (Modelo):
+A classe anotada representa uma tabela no banco de dados relacional:
+
+```java
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "usuarios")
+public class Usuario {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String nome;
+    
+    // Construtores, Getters e Setters
+}
+```
+
+- 3. O Repositório
+A interface que herda do Spring Data JPA traz métodos prontos de CRUD (Salvar, Buscar, Deletar):
+
+```java
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+    // Consultas personalizadas podem ser criadas apenas com o nome do método
+    Usuario findByNome(String nome);
+}
+```
+
 ## EXERCÍCIOS (CAPÍTULO 1):
 
 Para isso, você pode criar um novo projeto chamado gerenciador-pedidos, onde iremos trabalhar em classes de Produto e Pedido, por exemplo. Seu projeto deve ser do tipo “spring-sem-web” e deve ter as dependências do Spring JPA e do banco de dados PostgreSQL.
