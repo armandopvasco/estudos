@@ -65,6 +65,54 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 }
 ```
 
+#### Alguns pontos interessantes a se aprofundar:
+
+- Relacoinamento de Entidades com JPA (@ManyToOne, @ManyToMany, @OneToMany, etc);
+- Derived Queries (Exemplo: );
+	- Supondo que tenho uma classe Serie e quero buscar por parte do título, ignorando se está em maiúsculo ou minusculo:
+		- Exemplo de nome da function declarada na interface Repository.
+		- OBS.: São utilizadas palavras chave no nome da função
+			- Estrutura básica é: verbo introdutório + palavra-chave "By" + critérios de busca
+				
+				- Verbos introdutórios, temos: find, read, query, count e get;
+				
+				- Critérios são variados. Exemplos:
+					
+					- findByTitulo: em que fazemos uma busca por séries com um atributo específico "titulo" da classe Serie;
+					
+					- Palavras relativas à igualdade:
+						- Is: para ver igualdades
+						- Equals: para ver igualdades (essa palavra-chave e a anterior têm os mesmos princípios, e são mais utilizadas para a legibilidade do método).
+						- IsNot: para checar desigualdades
+						- IsNull: para verificar se um parâmetro é nulo
+					
+					- Palavras relativas à similaridade:
+						- Containing: para palavras que contenham um trecho
+						- StartingWith: para palavras que comecem com um trecho
+						- EndingWith: para palavras que terminem com um trecho
+						- Essas palavras podem ser concatenadas com outras condições, como o ContainingIgnoreCase, para não termos problemas de Case Sensitive.
+
+					- Palavras relacionadas à comparação:
+						- LessThan: para buscar registros menores que um valor
+						- LessThanEqual: para buscar registros menores ou iguais a um valor
+						- GreaterThan: para identificar registros maiores que um valor
+						- GreaterThanEqual: para identificar registros maiores ou iguais a um valor
+						- Between: para saber quais registros estão entre dois valores
+					
+					- Outras:
+						- OrderBy: para ordenar
+						- Asc: complementa o order by definindo a ordem ascendente
+						- Desc: complementa o order by definindo a ordem decrescente
+						- Distinct: para remover dados duplicados
+						- First: para pegar o primeiro registro
+						- Top: para limitar o número de dados
+
+		- findByTituloContainingIgnoreCase:
+			- findBy : Por se tratar de busca, deve começar pelo findBy;
+			- Titulo :´Deve ser o nome do atributo na classe java (independente do nome do campo na base de dados, o que importa é o nome do atributo na classe);
+			- Containing : Irá realizar o filtro utilizando um "containing" ou em forma de quer, utilizando um "like";
+			- IgnoreCase : Ao filtrar o texto, será ignorado se está maiúsculo ou minúscolo;
+
 ## EXERCÍCIOS (CAPÍTULO 1):
 
 Para isso, você pode criar um novo projeto chamado gerenciador-pedidos, onde iremos trabalhar em classes de Produto e Pedido, por exemplo. Seu projeto deve ser do tipo “spring-sem-web” e deve ter as dependências do Spring JPA e do banco de dados PostgreSQL.
@@ -112,3 +160,41 @@ Depois, associe produtos a pedidos na sua classe Principal.
 - 5 - Configure um relacionamento unidirecional entre Fornecedor e Produto. O relacionamento deve ser mapeado na classe Produto. Logo, é nessa classe que deverá ter a anotação de relacionamento. Qual é a melhor anotação para usarmos neste caso?
 
 - 6 - Faça as devidas associações entre Fornecedor e Produto na sua classe Principal.
+
+## EXERCÍCIOS (CAPÍTULO 3):
+
+Iremos explorar melhor as derived queries. Para isso, utilize a aplicação que você criou na lista de exercícios da aula 2. Vamos lá?
+
+Aqui, iremos apresentar uma descrição da busca que você deve fazer no banco de dados. Sua tarefa é decidir em qual dos repositórios essa busca melhor se encaixa, e criar a derived query correspondente. Caso tenha alguma dúvida sobre as consultas, consulte a documentação do Spring: https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html.
+
+- 1 - Retorne todos os produtos com o nome exato fornecido.
+ 
+- 2 - Retorne todos os produtos associados a uma categoria específica.
+ 
+- 3 - Retorne produtos com preço maior que o valor fornecido.
+ 
+- 4 - Retorne produtos com preço menor que o valor fornecido.
+ 
+- 5 - Retorne produtos cujo nome contenha o termo especificado.
+ 
+- 6 - Retorne pedidos que ainda não possuem uma data de entrega.
+ 
+- 7 - Retorne pedidos com data de entrega preenchida.
+ 
+- 8 - Retorne produtos de uma categoria ordenados pelo preço de forma crescente.
+ 
+- 9 - Retorne produtos de uma categoria ordenados pelo preço de forma decrescente.
+ 
+- 10 - Retorne a contagem de produtos em uma categoria específica.
+ 
+- 11 - Retorne a contagem de produtos cujo preço seja maior que o valor fornecido.
+ 
+- 12 - Retorne produtos com preço menor que o valor fornecido ou cujo nome contenha o termo especificado.
+ 
+- 13 - Retorne pedidos feitos após uma data específica.
+ 
+- 14 - Retorne pedidos feitos antes de uma data específica. , 15 - Retorne pedidos feitos em um intervalo de datas.
+ 
+- 16 - Retorne os três produtos mais caros.
+ 
+- 17 - Retorne os cinco produtos mais baratos de uma categoria.
