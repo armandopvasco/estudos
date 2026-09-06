@@ -9,13 +9,13 @@ O Spring Data JPA, o JPA e o Hibernate formam a pilha tecnológica padrão para 
 
 Você pode iniciar um projeto estruturado rapidamente utilizando a ferramenta oficial de geração de projetos no Spring Initializr (https://start.spring.io/).
 
-###Entendendo os Conceitos:
+### Entendendo os Conceitos:
 
 - JPA (Jakarta/Java Persistence API): É apenas uma especificação (um conjunto de regras e interfaces) de como os dados em objetos Java devem ser salvos em tabelas relacionais. Ela não faz nada sozinha.
 - Hibernate: É a implementação concreta da JPA. Ele transforma as chamadas orientadas a objetos em comandos SQL reais enviados ao banco de dados.
 - Spring Data JPA: É uma camada acima do Hibernate que remove códigos repetitivos (boilerplates), permitindo criar operações de banco escrevendo interfaces simples.
 
-###Exemplo Prático e Conceitual:
+### Exemplo Prático e Conceitual:
 
 - 1. Configuração (application.properties):
 O Spring Boot gerencia as conexões automaticamente quando você define as propriedades do seu banco no arquivo de configuração:
