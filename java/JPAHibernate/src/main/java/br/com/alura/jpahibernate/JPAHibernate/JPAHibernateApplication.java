@@ -190,5 +190,69 @@ public class JPAHibernateApplication implements CommandLineRunner {
 		System.out.println("\n17 - Retorne os cinco produtos mais baratos de uma categoria.");
 		List<Produto> listaP17 = repositorioProduto.findTop5ByOrderByPrecoAsc();
 		listaP17.forEach(System.out::println);
+
+		System.out.println("\nCAPÍTULO 4: Utilizando JPQL");
+		System.out.println("\n1 - Crie uma consulta que retorne os produtos com preço maior que um valor");
+		System.out.println("Informe um valor: ");
+		Double val41 = leitura.nextDouble();
+		List<Produto> produtos41 = repositorioProduto.buscaProdutosPrecoMaiorQueValor(val41);
+		produtos41.forEach(System.out::println);
+
+		System.out.println("\n2 - Crie uma consulta que retorne os produtos ordenados pelo preço crescente.");
+		List<Produto> produtos42 = repositorioProduto.buscaProdutosOrdemValor();
+		produtos42.forEach(System.out::println);
+
+		System.out.println("\n3 - Crie uma consulta que retorne os produtos ordenados pelo preço decrescente.");
+		List<Produto> produtos43 = repositorioProduto.buscaProdutosOrdemValorDec();
+		produtos43.forEach(System.out::println);
+
+		System.out.println("\n4 - Crie uma consulta que retorne os produtos que comecem com uma letra específica.");
+		System.out.println("Informe uma letra: ");
+		var letra44 = leitura.nextLine();
+		//OBS.: Não rodou como esperado
+		List<Produto> produtos44 = repositorioProduto.buscaProdutosPrimeiraLetra("G");
+		produtos44.forEach(System.out::println);
+
+		System.out.println("\n5 - Crie uma consulta que retorne os pedidos feitos entre duas datas.");
+		System.out.println("Digite a data inicial:");
+		var dtIni45 = leitura.nextLine();
+		LocalDate dtI45 = LocalDate.parse(dtIni45,formato);
+		System.out.println("Digite a data final:");
+		var dtFin45 = leitura.nextLine();
+		LocalDate dtF45 = LocalDate.parse(dtFin45,formato);
+		List<Pedido> pedidos45 = repositorioPedido.buscaPedidoEntreDatas(dtI45, dtF45);
+		pedidos45.forEach(p -> System.out.println(p.getId() + " - " +p.getData()));
+
+		System.out.println("\n6 - Crie uma consulta que retorne a média de preços dos produtos.");
+		var media46 = repositorioProduto.mediaPrecos();
+		System.out.println("Média: " + media46);
+
+		System.out.println("\n7 - Crie uma consulta que retorne o preço máximo de um produto em uma categoria");
+		System.out.println("Lista de categorias:");
+		repositorioCategoria.findAll().stream().forEach(c -> System.out.println(c.getId() + " - " + c.getNome()));
+		System.out.println("Informe o ID da categoria para buscar o preço máximo:");
+		var idCategoria47 = leitura.nextLong();
+		Double prc47 = repositorioProduto.precoMaxCategoria(idCategoria47);
+		System.out.println("Preço másximo: " + prc47);
+
+		System.out.println("\n8 - Crie uma consulta para contar o número de produtos por categoria.");
+		List<Object[]> result48 = repositorioCategoria.contarProdutosPorCategoria();
+		result48.forEach(r -> System.out.println((String) r[0] + " - " +(Number) r[1]));
+
+		System.out.println("\n9 - Crie uma consulta para filtrar categorias com mais de 10 produtos.");
+		List<Object[]> cats49 =  repositorioCategoria.categoriasComMaisDeDezProdutos();
+		cats49.forEach(c -> System.out.println("Categorias com mais de 6 produtos: " + (String) c[0]));
+
+		System.out.println("\n10 - Crie uma consulta para retornar os produtos filtrados por nome ou por categoria.");
+		List<Produto> prods4102 = repositorioProduto.buscarProdutosFiltrados("Produto 8", null);
+		List<Produto> prods410 = repositorioProduto.buscarProdutosFiltrados(null, "Categoria 2");
+		System.out.println("Por produto de nome 'Produto 8':");
+		prods4102.forEach(System.out::println);
+		System.out.println("Por categoria de nome 'Categoria 2':");
+		prods410.forEach(System.out::println);
+
+		System.out.println("\n11 - Crie uma consulta nativa para buscar os cinco produtos mais caros");
+		List<Produto> prod411 = repositorioProduto.top5ProdMaisCaros();
+		prod411.forEach(System.out::println);
 	}
 }

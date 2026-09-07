@@ -68,6 +68,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 #### Alguns pontos interessantes a se aprofundar:
 
 - Relacoinamento de Entidades com JPA (@ManyToOne, @ManyToMany, @OneToMany, etc);
+- JPQA
 - Derived Queries (Exemplo: );
 	- Supondo que tenho uma classe Serie e quero buscar por parte do título, ignorando se está em maiúsculo ou minusculo:
 		- Exemplo de nome da function declarada na interface Repository.
@@ -198,3 +199,29 @@ Aqui, iremos apresentar uma descrição da busca que você deve fazer no banco d
 - 16 - Retorne os três produtos mais caros.
  
 - 17 - Retorne os cinco produtos mais baratos de uma categoria.
+
+## EXERCÍCIOS (CAPÍTULO 4):
+
+Iremos continuar colocando os conhecimentos sobre a JPA em prática. Dessa vez, iremos explorar melhor as consultas JPQL. Para isso, utilize a aplicação que você criou na lista de exercícios da aula 2. Vamos lá?
+
+1 - Crie uma consulta que retorne os produtos com preço maior que um valor
+
+2 - Crie uma consulta que retorne os produtos ordenados pelo preço crescente.
+
+3 - Crie uma consulta que retorne os produtos ordenados pelo preço decrescente.
+
+4 - Crie uma consulta que retorne os produtos que comecem com uma letra específica.
+
+5 - Crie uma consulta que retorne os pedidos feitos entre duas datas.
+
+6 - Crie uma consulta que retorne a média de preços dos produtos.
+
+7 - Crie uma consulta que retorne o preço máximo de um produto em uma categoria
+
+8 - Crie uma consulta para contar o número de produtos por categoria.
+
+9 - Crie uma consulta para filtrar categorias com mais de 10 produtos.
+
+10 - Crie uma consulta para retornar os produtos filtrados por nome ou por categoria.
+
+11 - Crie uma consulta nativa para buscar os cinco produtos mais caros
