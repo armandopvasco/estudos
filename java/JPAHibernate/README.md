@@ -68,6 +68,16 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 #### Alguns pontos interessantes a se aprofundar:
 
 - Relacoinamento de Entidades com JPA (@ManyToOne, @ManyToMany, @OneToMany, etc);
+	- Relacionamento @ManyToOne e @OneToMany:
+		- Do lado @ManyToOne (Exemplo: tabela Disciplina, onde uma disciplina pode ter apenas 1 professor), pode-se definir:
+			- Declaração em Java:
+				@ManyToOne
+				@JoinColumn(name = "professor_id")
+				private Professor professor;
+		- Do lado @OneToMany (Exemplo: tabela Professor, onde 1 professor pode ter várias disciplinas), pode-se definir:
+			- Declaração em Java:
+				@OneToMany (mappedBy = "professor_id")
+				private List<Diciplina> disciplinas;
 - JPQA
 - Derived Queries (Exemplo: );
 	- Supondo que tenho uma classe Serie e quero buscar por parte do título, ignorando se está em maiúsculo ou minusculo:
