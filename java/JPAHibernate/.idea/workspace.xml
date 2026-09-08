@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="445d08da-071a-4802-8791-5221e7b705d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Projetos de Cursos/musicmatch-com-jpa/src/main/java/br/com/alura/musicmatch/musicmatch/model/Artista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Projetos de Cursos/musicmatch-com-jpa/src/main/java/br/com/alura/musicmatch/musicmatch/model/Musica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Projetos de Cursos/musicmatch-com-jpa/src/main/java/br/com/alura/musicmatch/musicmatch/model/TipoArtista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Projetos de Cursos/musicmatch-com-jpa/src/main/java/br/com/alura/musicmatch/musicmatch/principal/Principal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Projetos de Cursos/musicmatch-com-jpa/src/main/java/br/com/alura/musicmatch/musicmatch/repository/ArtistaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Projetos de Cursos/musicmatch-com-jpa/src/main/java/br/com/alura/musicmatch/musicmatch/repository/MusicaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/JPAHibernateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/JPAHibernateApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/repository/CategoriaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/repository/CategoriaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/repository/PedidoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/repository/PedidoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/repository/ProdutoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/jpahibernate/JPAHibernate/repository/ProdutoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alura/jpahibernate/JPAHibernate/JPAHibernateApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alura/jpahibernate/JPAHibernate/JPAHibernateApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/java/br/com/alura/screenmatch/principal/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/java/br/com/alura/screenmatch/principal/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/java/br/com/alura/screenmatch/repository/SerieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projetos de Cursos/screenmatch-com-jpa/src/main/java/br/com/alura/screenmatch/repository/SerieRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
