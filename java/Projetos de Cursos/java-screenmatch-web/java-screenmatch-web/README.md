@@ -14,3 +14,8 @@ Projeto desenvolvido no terceiro curso da formação Avançando com Java da Alur
 - Conectar dados disponibilizados pelo back-end à uma aplicação front-end, disponibilizada nesse [link](https://github.com/jacqueline-oliveira/3356-java-web-front) 
 - Tratar erros de CORS na disponibilização de dados;
 - Fornecer uma experiência fullstack, demonstrando o fluxo ponta a ponta da aplicação.
+
+## Pontos aprendidos
+
+- Spring Web
+- API REST
