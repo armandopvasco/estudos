@@ -1,6 +1,8 @@
 package br.com.alura.screenmatch.controller;
 
+import br.com.alura.screenmatch.dto.EpisodioDTO;
 import br.com.alura.screenmatch.dto.SerieDTO;
+import br.com.alura.screenmatch.model.Categoria;
 import br.com.alura.screenmatch.model.Serie;
 import br.com.alura.screenmatch.repository.SerieRepository;
 import br.com.alura.screenmatch.service.SerieService;
@@ -38,5 +40,25 @@ public class SerieController {
     @GetMapping("/{id}")
     public SerieDTO obterPorId(@PathVariable Long id) {
         return servico.obterPorId(id);
+    }
+
+    @GetMapping("/{id}/temporadas/todas")
+    private List<EpisodioDTO> obterTodasTemporadas(@PathVariable Long id){
+        return servico.obterTodasTeporadas(id);
+    }
+
+    @GetMapping("/{id}/temporadas/{numero}")
+    private List<EpisodioDTO> obterTemporada(@PathVariable Long id, @PathVariable Long numero){
+        return servico.obterTeporada(id, numero);
+    }
+
+    @GetMapping("/categoria/{nomeGenero}")
+    private List<SerieDTO> obterSeriesPorCategoria(@PathVariable String nomeGenero){
+        return servico.obterSeriesPorCategoria(nomeGenero);
+    }
+
+    @GetMapping("/{id}/temporadas/top")
+    private List<EpisodioDTO> obterTop5Temporadas(@PathVariable Long id){
+        return servico.obterTop5Temporadas(id);
     }
 }
